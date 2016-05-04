@@ -1,2 +1,2 @@
 # WFMenu
-Model exercise
+School MVC exercice.
