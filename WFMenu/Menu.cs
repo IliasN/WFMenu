@@ -136,7 +136,7 @@ namespace WFMenu
             ret += this.NbSpag.ToString() + " : Spaghettis à la bolognaise à " + SPAG_PRICE.ToString() + Environment.NewLine;
             ret += this.NbTruite.ToString() + " : Truite aux amendes à " + TRUITE_PRICE.ToString() + Environment.NewLine;
             ret += this.NbDessert.ToString() + " : Dessert à " + DESSERT_PRICE.ToString() + Environment.NewLine;
-            ret += "Votre total à payer est de : " + Total.ToString() + " Frs";
+            ret += "Votre total à payer est de : " + Total.ToString() + " Frs" + Environment.NewLine;
             ret += "*****************************************************************";
             return ret;
         }
