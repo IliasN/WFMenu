@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WFMenu
 {
@@ -132,12 +133,22 @@ namespace WFMenu
 
         public override string ToString()
         {
-            string ret = this.NbBeef.ToString() + " : Roti de boeuf à " + BEEF_PRICE.ToString() + Environment.NewLine;
+            string ret = "";
+            if (this.Total == 0)
+            {
+                MessageBox.Show("Vous devez au moins avoir qqch dans votre commande pour commander!");
+                return ret;
+            }
+            if(this.NbBeef>0)
+            ret += this.NbBeef.ToString() + " : Roti de boeuf à " + BEEF_PRICE.ToString() + Environment.NewLine;
+            if(this.NbSpag>0)
             ret += this.NbSpag.ToString() + " : Spaghettis à la bolognaise à " + SPAG_PRICE.ToString() + Environment.NewLine;
-            ret += this.NbTruite.ToString() + " : Truite aux amendes à " + TRUITE_PRICE.ToString() + Environment.NewLine;
+            if(this.NbTruite>0)
+            ret += this.NbTruite.ToString() + " : Truite aux amandes à " + TRUITE_PRICE.ToString() + Environment.NewLine;
+            if(this.NbDessert>0)
             ret += this.NbDessert.ToString() + " : Dessert à " + DESSERT_PRICE.ToString() + Environment.NewLine;
             ret += "Votre total à payer est de : " + Total.ToString() + " Frs" + Environment.NewLine;
-            ret += "*****************************************************************";
+            ret += "*****************************************************************" + Environment.NewLine;
             return ret;
         }
 
