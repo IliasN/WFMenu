@@ -1,3 +1,8 @@
+/**
+ * Name : Ilias N'hairi
+ * Date : 04.05.2016
+ * Version : 1.0
+ */
 using System;
 using System.Collections.Generic;
 using System.Linq;
